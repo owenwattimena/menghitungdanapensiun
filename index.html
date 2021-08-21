@@ -187,12 +187,12 @@
             $("#inputPengeluaranPerbulan").val(parseInt($("#inputPengeluaranPerbulan").val().replace(/\D/g, ''),10).toLocaleString())
             $("#inputDanaTersedia").val(parseInt($("#inputDanaTersedia").val().replace(/\D/g, ''),10).toLocaleString())
             // Input Element Value
-            umur                        = $('#inputUmur').val().replace(/,/g, "");
-            umurPensiun                 = $('#inputUmurPensiun').val().replace(/,/g, "");
-            pengeluaranPerbulan         = $('#inputPengeluaranPerbulan').val().replace(/,/g, "");
-            inflasiTahunan              = $('#inputInflasiTahunan').val().replace(/,/g, "");
-            targetReturn                = $('#inputTargetReturn').val().replace(/,/g, "");
-            danaTersedia                = $('#inputDanaTersedia').val().replace(/,/g, "");
+            umur                        = $('#inputUmur').val().replace(/,/g, "").replace(/\./g, "");
+            umurPensiun                 = $('#inputUmurPensiun').val().replace(/,/g, "").replace(/\./g, "");
+            pengeluaranPerbulan         = $('#inputPengeluaranPerbulan').val().replace(/,/g, "").replace(/\./g, "");
+            inflasiTahunan              = $('#inputInflasiTahunan').val().replace(/,/g, "").replace(/\./g, "");
+            targetReturn                = $('#inputTargetReturn').val().replace(/,/g, "").replace(/\./g, "");
+            danaTersedia                = $('#inputDanaTersedia').val().replace(/,/g, "").replace(/\./g, "");
             
             hitungDanaPensiun(umur, umurPensiun, pengeluaranPerbulan, inflasiTahunan, targetReturn, danaTersedia);
         })
@@ -200,12 +200,12 @@
         $("input[type='text']").on('keyup', function(){
             var n = parseInt($(this).val().replace(/\D/g,''),10);
             $(this).val(n.toLocaleString());
-            umur                        = $('#inputUmur').val().replace(/,/g, "");
-            umurPensiun                 = $('#inputUmurPensiun').val().replace(/,/g, "");
-            pengeluaranPerbulan         = $('#inputPengeluaranPerbulan').val().replace(/,/g, "");
-            inflasiTahunan              = $('#inputInflasiTahunan').val().replace(/,/g, "");
-            targetReturn                = $('#inputTargetReturn').val().replace(/,/g, "");
-            danaTersedia                = $('#inputDanaTersedia').val().replace(/,/g, "");
+            umur                        = $('#inputUmur').val().replace(/,/g, "").replace(/\./g, "");
+            umurPensiun                 = $('#inputUmurPensiun').val().replace(/,/g, "").replace(/\./g, "");
+            pengeluaranPerbulan         = $('#inputPengeluaranPerbulan').val().replace(/,/g, "").replace(/\./g, "");
+            inflasiTahunan              = $('#inputInflasiTahunan').val().replace(/,/g, "").replace(/\./g, "");
+            targetReturn                = $('#inputTargetReturn').val().replace(/,/g, "").replace(/\./g, "");
+            danaTersedia                = $('#inputDanaTersedia').val().replace(/,/g, "").replace(/\./g, "");
             hitungDanaPensiun(umur, umurPensiun, pengeluaranPerbulan, inflasiTahunan, targetReturn, danaTersedia);
         });
         
